@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang='en'>
+<head>
+<meta charset='utf-8'>
+<meta name='viewport' content='width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no'>
+<title>PixelFox</title>
+<style>
+html,body{margin:0;height:100%;background:#000;overflow:hidden;touch-action:none;user-select:none;-webkit-user-select:none}
+body{display:flex;align-items:center;justify-content:center}
+canvas{image-rendering:pixelated;image-rendering:crisp-edges;background:#000}
+#pad{display:none}
+.touch #pad{display:block}
+.b{position:fixed;bottom:18px;width:64px;height:64px;border-radius:50%;background:rgba(255,255,255,.18);border:2px solid rgba(255,255,255,.5);color:#fff;font:bold 13px monospace;display:flex;align-items:center;justify-content:center;touch-action:none}
+.b.on{background:rgba(255,255,255,.45)}
+#bl{left:14px}#br{left:92px}#brun{right:92px}#bjump{right:14px;width:72px;height:72px}
+#bstart{top:6px;bottom:auto;left:50%;margin-left:-30px;width:60px;height:28px;border-radius:8px}
+</style>
+</head>
+<body>
+<canvas id='screen' width='256' height='240'></canvas>
+<div id='pad'>
+<div class='b' id='bl' data-btn='left'>&lt;</div>
+<div class='b' id='br' data-btn='right'>&gt;</div>
+<div class='b' id='brun' data-btn='run'>RUN</div>
+<div class='b' id='bjump' data-btn='jump'>JUMP</div>
+<div class='b' id='bstart' data-btn='start'>START</div>
+</div>
+<script src='src/constants.js'></script>
+<script src='src/physics.js'></script>
+<script src='src/scoring.js'></script>
+<script src='src/level.js'></script>
+<script src='src/levels.js'></script>
+<script src='src/world.js'></script>
+<script src='src/game.js'></script>
+<script src='src/audio.js'></script>
+<script src='src/input.js'></script>
+<script src='src/render.js'></script>
+<script src='src/main.js'></script>
+</body>
+</html>
